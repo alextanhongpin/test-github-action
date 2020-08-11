@@ -25,7 +25,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: Runs only on pull request
       run: echo is pull request event
-      #if: ${{ github.event_name == 'pull_request' }}
+      if: ${{ github.event_name == 'pull_request' }}
 
     - name: Run only if push
       run: echo is push event
