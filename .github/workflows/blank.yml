@@ -24,12 +24,12 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Runs only on pull request
-      run: echo ${{ toJson(github.event) }}
-      #if: ${{ github.event == 'pull_request' }}
+      run: echo is pull request event
+      #if: ${{ github.event_name == 'pull_request' }}
 
     - name: Run only if push
       run: echo is push event
-      if: ${{ github.event == 'push' }}
+      if: ${{ github.event_name == 'push' }}
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
